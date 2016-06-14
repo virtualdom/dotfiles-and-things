@@ -210,7 +210,7 @@
 	<key>name</key>
 	<string>dom</string>
 	<key>rowCount</key>
-	<integer>50</integer>
+	<integer>20</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
