@@ -1,0 +1,7 @@
+[user]
+  name = Dominic Joseph
+  email = dtpjoseph@gmail.com
+
+[core]
+  editor = subl -w -n
+  excludesfile = ~/.gitignore_global
