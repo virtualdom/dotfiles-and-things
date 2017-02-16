@@ -27,8 +27,8 @@ else
   echo "An awesome version of Git is already installed!";
 fi
 
-echo "Installing NVM v0.31.1 (check for an update later!)"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+echo "Installing NVM v0.33.1 (check for an update later!)"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 source ~/.bash_profile
 
 echo "Installing Node"
