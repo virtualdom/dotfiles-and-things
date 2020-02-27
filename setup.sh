@@ -27,17 +27,6 @@ else
   echo "An awesome version of Git is already installed!";
 fi
 
-echo "Installing NVM v0.33.1 (check for an update later!)"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-source ~/.bash_profile
-
-echo "Installing Node"
-nvm install stable
-
-echo "Installing AVN"
-npm install -g avn avn-nvm
-avn setup
-
 if [ -d "/Applications/Sublime Text.app" ]; then
   rm "/usr/local/bin/subl";
   ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/subl";

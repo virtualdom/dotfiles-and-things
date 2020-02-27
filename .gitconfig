@@ -3,5 +3,8 @@
   email = dtpjoseph@gmail.com
 
 [core]
-  editor = subl -w -n
+  editor = vim
   excludesfile = ~/.gitignore_global
+[alias]
+	co = checkout
+	cob = checkout -b

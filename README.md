@@ -27,9 +27,6 @@ cd ~/.dotfiles
   * Xcode
   * [Homebrew](http://brew.sh)
   * Git
-  * [NVM](https://github.com/creationix/nvm)
-  * Node
-  * [AVN](https://www.npmjs.com/package/avn)
 * Symlinks the following
   * `~/.inputrc`
   * `~/.gitignore_global`
