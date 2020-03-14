@@ -34,3 +34,9 @@ cd ~/.dotfiles
   * `~/.gitconfig`
   * `~/.zshrc`
   * Sublime settings
+
+# ITerm Keyboard Shortcuts to add
+* `⌘ + ←`: `0x01`
+* `⌘ + →`: `0x05`
+* `⌘ + ⌫`: `0x15`
+* `⌥ + ⌫`: `0x17`

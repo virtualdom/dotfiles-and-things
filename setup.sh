@@ -18,14 +18,20 @@ xcode-select --install
 echo "--> Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "--> Installing MAS"
+brew install mas
+
 echo "--> Installing Xcode from App Store"
 mas install 497799835 # install Xcode
+
+echo "--> Accepting XCode license"
+sudo xcodebuild -license accept
 
 echo "--> Installing starship"
 brew install starship;
 
 echo "--> Installing Git"
-brew install git;
+brew install git || brew upgrade git;
 
 if [ -d "/Applications/Sublime Text.app" ]; then
   rm "/usr/local/bin/subl";
