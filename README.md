@@ -10,7 +10,7 @@ A checklist for me set up my OSX work station without forgetting anything.
   * "AutoFileName"
   * "ESLint"
   * "GitGutter"
-4. Open Terminal preferences and import `dom.terminal`. Make it the default terminal profile.
+4. Install iTerm and import the `dom-term.json` profile.
 5. Clone this repository and follow the bash instructions.
 
 ## Installation
@@ -26,11 +26,17 @@ cd ~/.dotfiles
 * Installs the following
   * Xcode
   * [Homebrew](http://brew.sh)
+  * MAS (to install App Store apps, like Xcode)
+  * Starship
   * Git
 * Symlinks the following
-  * `~/.inputrc`
   * `~/.gitignore_global`
   * `~/.gitconfig`
-  * [`~/.git-prompt.sh`](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
-  * `~/.bash_profile`
+  * `~/.zshrc`
   * Sublime settings
+
+# ITerm Keyboard Shortcuts to add
+* `⌘ + ←`: `0x01`
+* `⌘ + →`: `0x05`
+* `⌘ + ⌫`: `0x15`
+* `⌥ + ⌫`: `0x17`

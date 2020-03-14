@@ -2,6 +2,10 @@
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 14,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"open_files_in_new_window": false,
 	"remember_open_files": false,
 	"tab_size": 2,

@@ -1,31 +1,37 @@
 umask 0022
 
-rm ~/.inputrc
-ln -s ${PWD}/.inputrc ~/.inputrc
-
+echo "--> Link gitignore_global"
 rm ~/.gitignore_global
 ln -s ${PWD}/.gitignore_global ~/.gitignore_global
 
+echo "--> Link gitconfig"
 rm ~/.gitconfig
 ln -s ${PWD}/.gitconfig ~/.gitconfig
 
-rm ~/.git-prompt.sh
-ln -s ${PWD}/.git-prompt.sh ~/.git-prompt.sh
+echo "--> Link zshrc"
+rm ~/.zshrc
+ln -s ${PWD}/.zshrc ~/.zshrc
 
-rm ~/.bash_profile
-ln -s ${PWD}/.bash_profile ~/.bash_profile
-
-echo "Installing Xcode"
+echo "--> Installing Xcode via xcode-select"
 xcode-select --install
 
-echo "Installing Homebrew"
+echo "--> Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-if git --version | grep -q 2.7.*; then
-  echo "Installing Git"; brew install git;
-else
-  echo "An awesome version of Git is already installed!";
-fi
+echo "--> Installing MAS"
+brew install mas
+
+echo "--> Installing Xcode from App Store"
+mas install 497799835 # install Xcode
+
+echo "--> Accepting XCode license"
+sudo xcodebuild -license accept
+
+echo "--> Installing starship"
+brew install starship;
+
+echo "--> Installing Git"
+brew install git || brew upgrade git;
 
 if [ -d "/Applications/Sublime Text.app" ]; then
   rm "/usr/local/bin/subl";
@@ -34,8 +40,10 @@ if [ -d "/Applications/Sublime Text.app" ]; then
     rm "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
     ln -s "${PWD}/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
   else
-    echo "subl has been set up, but preferences haven't been set."
+    echo "--> subl has been set up, but preferences haven't been set."
   fi
 else
-  echo "Sublime Text 3 isn't installed! Do that and we'll set it up.";
+  echo "--> Sublime Text 3 isn't installed! Do that and we'll set it up.";
 fi
+
+echo "--> Don't forget to install NVM!"
