@@ -38,5 +38,7 @@ cd ~/.dotfiles
 # ITerm Keyboard Shortcuts to add
 * `⌘ + ←`: `0x01`
 * `⌘ + →`: `0x05`
+* `⌥ + ←`: Esc seq `b`
+* `⌥ + →`: Esc seq `f`
 * `⌘ + ⌫`: `0x15`
 * `⌥ + ⌫`: `0x17`
