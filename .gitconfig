@@ -8,3 +8,5 @@
 [alias]
 	co = checkout
 	cob = checkout -b
+[commit]
+	gpgsign = true
